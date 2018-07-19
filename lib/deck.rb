@@ -19,9 +19,8 @@ class Deck
     '10♦', 'J♦', 'Q♦', 'K♦']
   end
   def deal_card
-    random_card = @pack.sample(1)
+    dealt_card = @pack.sample(1)
+    @pack.delete(dealt_card.join)
   end
-  def remove_from_pack(random_card)
-    @pack.delete(random_card)
-  end
+
 end

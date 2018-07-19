@@ -19,9 +19,8 @@ describe Deck do
     '7♦', '8♦', '9♦',
     '10♦', 'J♦', 'Q♦', 'K♦']
   end
-  it "#remove_from_pack removes the dealt card from the pack" do
-    random_card = 'K♥'
-    deck.remove_from_pack(random_card)
-    expect(deck.pack.include?(random_card)).to eq false
+  it "#deal_card deals out a card from the pack" do
+    card = deck.deal_card
+    expect(deck.pack.include?(card)).to eq false
   end
 end
